@@ -1,13 +1,7 @@
-/.vscode
-/.idea
-/.directory
-/..env/
+.vscode
+.idea
+
+.directory
+.DS_Store
 
 .env
-
-.npmrc
-
-.cache
-node_modules
-.nyc_output
-.DS_Store

@@ -17,4 +17,3 @@ services:
     tty: true
     volumes:
       - ${CLEAN_FOLDER:?lost CLEAN_FOLDER variable}:/recycle
-
