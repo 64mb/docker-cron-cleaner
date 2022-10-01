@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  cleaner:
+    build:
+      context: ./
+      dockerfile: ./dockerfile
+      args:
+        - TIME_ZONE=${TIME_ZONE:?lost TIME_ZONE variable}
+    image: cleaner:1.2.0
+    container_name: cleaner
+    restart: always
+    environment:
+      - CRON=${CRON:?lost CRON variable}
+      - CLEAN_FILE_AFTER=${CLEAN_FILE_AFTER:?lost CLEAN_FILE_AFTER variable}
+      - CLEAN_THROTTLING=${CLEAN_THROTTLING}
+    tty: true
+    volumes:
+      - ${CLEAN_FOLDER:?lost CLEAN_FOLDER variable}:/recycle
+

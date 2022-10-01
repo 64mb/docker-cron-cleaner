@@ -1,0 +1,13 @@
+/.vscode
+/.idea
+/.directory
+/..env/
+
+.env
+
+.npmrc
+
+.cache
+node_modules
+.nyc_output
+.DS_Store
